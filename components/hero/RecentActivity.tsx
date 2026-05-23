@@ -26,6 +26,18 @@ const DUMMY_COMMITS = [
     repo: "arch-viz",
     time: new Date(Date.now() - 1000 * 60 * 60 * 75).toISOString(),
   },
+  {
+    sha: "b3d6f2c",
+    message: "feat: rabbitmq dead letter queue handler",
+    repo: "ecom-msvc",
+    time: new Date(Date.now() - 1000 * 60 * 60 * 98).toISOString(),
+  },
+  {
+    sha: "7e1c4a8",
+    message: "perf: pg query plan + composite index on orders",
+    repo: "ecom-msvc",
+    time: new Date(Date.now() - 1000 * 60 * 60 * 130).toISOString(),
+  },
 ];
 
 export default async function RecentActivity() {
@@ -34,12 +46,11 @@ export default async function RecentActivity() {
 
   return (
     <div>
-      <div className="border border-rule">
+      <div className="divide-y divide-rule/40">
         {commits.map((commit) => (
           <div
             key={`${commit.sha}-${commit.time}`}
-            className="grid grid-cols-[52px_1fr_auto] gap-2 items-start
-                       px-3 py-[0.5rem] border-b border-rule last:border-b-0"
+            className="grid grid-cols-[52px_1fr_auto] gap-2 items-start py-[0.5rem]"
           >
             <span className="font-mono text-[0.625rem] text-accent tracking-[0.03em] leading-[1.4]">
               {commit.sha}
@@ -59,7 +70,7 @@ export default async function RecentActivity() {
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-1.5 mt-4 font-mono text-[0.625rem]
-                   text-accent uppercase tracking-[0.1em] hover:opacity-70 transition-opacity duration-150"
+                   text-ink-muted uppercase tracking-[0.1em] hover:text-accent transition-colors duration-150"
       >
         VIEW ON GITHUB
         <span className="text-[0.75rem] leading-none" aria-hidden="true">
