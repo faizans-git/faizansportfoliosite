@@ -38,6 +38,12 @@ const DUMMY_COMMITS = [
     repo: "ecom-msvc",
     time: new Date(Date.now() - 1000 * 60 * 60 * 130).toISOString(),
   },
+  {
+    sha: "1e7ad0",
+    message: "init: arch visualizer 3d render",
+    repo: "arch-viz",
+    time: new Date(Date.now() - 1000 * 60 * 60 * 75).toISOString(),
+  },
 ];
 
 export default async function RecentActivity() {

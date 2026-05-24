@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       aria-label="Introduction"
-      className="grid lg:grid-cols-[57fr_43fr] border-rule-b"
+      className="grid lg:grid-cols-[57fr_43fr] lg:pb-21 mt-2 border-rule-b"
     >
       <div className="flex flex-col justify-center px-[clamp(1rem,5vw,2.5rem)] py-12 lg:py-16 border-rule-b lg:border-b-0 lg:border-rule-r">
         <div className="flex items-center gap-2 mb-5" aria-hidden="true">
@@ -40,8 +40,8 @@ export default function Hero() {
 
         <p className="text-[0.9375rem] text-ink-subtle leading-[1.8] max-w-[38ch] mb-8">
           Focused on systems that hold up under pressure and interfaces worth
-          using. Clean APIs, distributed architecture, and frontends that dont
-          lie about what the backend can do.
+          using. Clean APIs, distributed architecture, and frontend that pleases
+          the eye.
         </p>
 
         <div className="flex flex-wrap gap-3">
@@ -57,7 +57,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-start px-[clamp(1rem,4vw,1.5rem)] pt-12 lg:pt-16 pb-12">
+      <div className="flex flex-col justify-start px-[clamp(1rem,4vw,1.5rem)] pt-12 lg:pt-20 pb-12">
         <div className="mb-10">
           <div className="flex items-center gap-2 mb-4" aria-hidden="true">
             <span className="section-label text-ink-muted">02</span>
@@ -71,12 +71,15 @@ export default function Hero() {
           >
             <tbody>
               {STATUS_ROWS.map(({ key, value, accent }) => (
-                <tr key={key} className="border-b border-rule last:border-b-0">
-                  <td className="font-mono text-[0.625rem] text-ink-muted uppercase tracking-wider py-[0.5rem] px-3 w-[44%]">
+                <tr
+                  key={key}
+                  className="border-b border-rule last:border-b-0 py-2 my-2"
+                >
+                  <td className="font-mono text-[0.625rem] text-ink-muted uppercase tracking-wider py-2 px-3 w-[44%]">
                     {key}
                   </td>
                   <td
-                    className={`font-mono text-[0.625rem] tracking-[0.03em] py-[0.5rem] px-3 text-right ${accent ? "text-accent" : "text-ink"}`}
+                    className={`font-mono text-[0.625rem] tracking-[0.03em] py-2 px-3 text-right ${accent ? "text-accent" : "text-ink"}`}
                   >
                     {value}
                   </td>
